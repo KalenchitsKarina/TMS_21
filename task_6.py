@@ -22,7 +22,10 @@ min=matrix[0][0]
 summ=0
 maxrow=sum(matrix[0])
 imaxrow=0
+minrow=sum(matrix[0])
+iminrow=0
 f=0
+
 for i in range (n):
     f=0
     for j in range (m):         #проход по элементам
@@ -33,14 +36,18 @@ for i in range (n):
         summ+=matrix[i][j]      #cумма всех элементов
         f+=matrix[i][j]         #cумма элементов ряда
     if maxrow<f:                #поиск ряда с максимальной суммой эл
-        f=maxrow
+        maxrow=f
         imaxrow=i
+    if minrow>f:                #поиск ряда с минимальной суммой эл
+        minrow=f
+        iminrow=i
 print ('maximum matrix element : ',max )
 print ('minimum matrix element : ', min)
 print ('summ of elements : ',summ)
 print ('index of the row with the maximum sum of elements : ', imaxrow)
+print ('index of the row with the minimum sum of elements : ', iminrow)
 
-maxcolumn=sum(matrix[0])
+maxcolumn=sum(matrix[0])        #поиск колонки с макс суммой эл
 imaxcolumn=0
 for j in range (m):
     f=0
