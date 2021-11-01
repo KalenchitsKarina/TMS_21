@@ -18,16 +18,18 @@ for i in matrix:
     print (i)
 
 max=matrix[0][0]
-for i in range (n):
-    for j in range (m):
-        if matrix[i][j]>max:
-            max=matrix[i][j]
-print ('maximum matrix element : ',max )
-
 min=matrix[0][0]
+summ=0
 for i in range (n):
-    for j in range (m):
-        if matrix[i][j]<min:
-            min = matrix[i][j]
+    for j in range (m):         #проход по элементам
+        if matrix[i][j]>max:    #поиск наибольшего
+            max=matrix[i][j]     
+        if matrix[i][j]<min:    #поиск наименьшего
+            min=matrix[i][j]
+        summ+=matrix[i][j]      #cумма всех элементов
+print ('maximum matrix element : ',max )
 print ('minimum matrix element : ', min)
+print ('summ of elements : ',summ)
+
+
 
