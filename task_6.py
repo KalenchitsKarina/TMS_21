@@ -15,10 +15,11 @@ for i in range(n):
         matrix[i].append(randint(a,b))
 
 print ()
-print ('matrix :')
+print ('1) matrix :')
 for i in matrix:
     print (i)
 
+print()
 max=matrix[0][0]
 min=matrix[0][0]
 summ=0
@@ -43,11 +44,11 @@ for i in range (n):
     if minrow>f:                #поиск ряда с минимальной суммой эл
         minrow=f
         iminrow=i
-print ('maximum matrix element : ',max )
-print ('minimum matrix element : ', min)
-print ('summ of elements : ',summ)
-print ('index of the row with the maximum sum of elements : ', imaxrow)
-print ('index of the row with the minimum sum of elements : ', iminrow)
+print ('2) maximum matrix element : ',max )
+print ('3) minimum matrix element : ', min)
+print ('4) summ of elements : ',summ)
+print ('5) index of the row with the maximum sum of elements : ', imaxrow)
+print ('6) index of the row with the minimum sum of elements : ', iminrow)
 
 maxcolumn=sum(matrix[0])        
 imaxcolumn=0
@@ -63,10 +64,10 @@ for j in range (m):
     if mincolumn>f:            #поиск колонки с мин суммой элкмкетов
         mincolumn=f
         imincolumn=j
-print ('index of the column with the max sum of elements : ',imaxcolumn)
-print ('index of the column with the min sum of elements : ',imincolumn)
+print ('7)index of the column with the max sum of elements : ',imaxcolumn)
+print ('8)index of the column with the min sum of elements : ',imincolumn)
 print ()
-print ('ZEROING THE ELEMENTS ABOVE THE MAIN DIAGONAL : ')
+print ('9)ZEROING THE ELEMENTS ABOVE THE MAIN DIAGONAL : ')
 for i in range (n):
     for j in range (m):
         if j>i:
@@ -74,7 +75,7 @@ for i in range (n):
 for i in matrix:
     print (i)
 print ()
-print ('ZEROING THE ELEMENTS BELOW THE MAIN DIAGONAL : ')
+print ('10)ZEROING THE ELEMENTS BELOW THE MAIN DIAGONAL : ')
 for i in range (n):
     for j in range (m):
         if i>j:
@@ -95,7 +96,7 @@ for i in range (m):
         matrix_b[i].append(randint(a,b))
 
 print ()
-print ('matrix_a :')
+print ('11) matrix_a :')
 for i in matrix_a:
     print (i)
 print ()
@@ -104,24 +105,36 @@ for i in matrix_b:
     print (i)
 
 print()
-print('matrix_c :')
+print('12) matrix_c :')
 matrix_d=[]
-matrix_c=[]               
+matrix_c=[]  
+matrix_e=[]             
 for i in range (m):
     matrix_d.append([])
     matrix_c.append([])
-for i in range (m):              #сумма матриц а и b 
+    matrix_e.append([])
+for i in range (m):                 #сумма матриц а и b 
     for j in range (n):
         matrix_c[i].append(matrix_a[i][j]+matrix_b[i][j])
 for i in matrix_c:
     print (i)
 
-for i in range (m):             #разность матриц a b
+for i in range (m):                #разность матриц a b
     for j in range (n):
         matrix_d[i].append(matrix_a[i][j]-matrix_b[i][j])
 print()
-print('matrix_d : ')
+print('13) matrix_d : ')
 for i in matrix_d:
+    print (i)
+
+print()
+g=int(input('14) Enter g : '))
+for i in range (m):                #матрица_a*g
+    for j in range (n):
+        matrix_e[i].append(matrix_a[i][j]*g)
+print()
+print('matrix_e : ')
+for i in matrix_e:
     print (i)
 
 
