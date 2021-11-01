@@ -71,5 +71,13 @@ for i in range (n):
             matrix [i][j]=0
 for i in matrix:
     print (i)
+print ()
+print ('ZEROING THE ELEMENTS BELOW THE MAIN DIAGONAL : ')
+for i in range (n):
+    for j in range (m):
+        if i>j:
+            matrix [i][j]=0
+for i in matrix:
+    print (i)
 
 
