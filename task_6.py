@@ -105,11 +105,23 @@ for i in matrix_b:
 
 print()
 print('matrix_c :')
-matrix_c=matrix_a                #сумма матриц а и b 
+matrix_d=[]
+matrix_c=[]               
 for i in range (m):
+    matrix_d.append([])
+    matrix_c.append([])
+for i in range (m):              #сумма матриц а и b 
     for j in range (n):
-        matrix_c[i][j]+=matrix_b[i][j]
+        matrix_c[i].append(matrix_a[i][j]+matrix_b[i][j])
 for i in matrix_c:
+    print (i)
+
+for i in range (m):             #разность матриц a b
+    for j in range (n):
+        matrix_d[i].append(matrix_a[i][j]-matrix_b[i][j])
+print()
+print('matrix_d : ')
+for i in matrix_d:
     print (i)
 
 
