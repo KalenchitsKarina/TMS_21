@@ -49,6 +49,8 @@ print ('index of the row with the minimum sum of elements : ', iminrow)
 
 maxcolumn=sum(matrix[0])        #поиск колонки с макс суммой эл
 imaxcolumn=0
+mincolumn=sum(matrix[0])
+imincolumn=0
 for j in range (m):
     f=0
     for i in range (n):
@@ -56,8 +58,11 @@ for j in range (m):
     if maxcolumn<f:
         maxcolumn=f
         imaxcolumn=j
+    if mincolumn>f:
+        mincolumn=f
+        imincolumn=j
 print ('index of the column with the max sum of elements : ',imaxcolumn)
-
+print ('index of the column with the min sum of elements : ',imincolumn)
 
 
 
