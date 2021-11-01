@@ -103,5 +103,14 @@ print ('matrix_b :')
 for i in matrix_b:
     print (i)
 
+print()
+print('matrix_c :')
+matrix_c=matrix_a                #сумма матриц а и b 
+for i in range (m):
+    for j in range (n):
+        matrix_c[i][j]+=matrix_b[i][j]
+for i in matrix_c:
+    print (i)
+
 
 
