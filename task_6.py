@@ -20,16 +20,25 @@ for i in matrix:
 max=matrix[0][0]
 min=matrix[0][0]
 summ=0
+maxrow=0
+imaxrow=0
+f=0
 for i in range (n):
+    f=0
     for j in range (m):         #проход по элементам
         if matrix[i][j]>max:    #поиск наибольшего
             max=matrix[i][j]     
         if matrix[i][j]<min:    #поиск наименьшего
             min=matrix[i][j]
         summ+=matrix[i][j]      #cумма всех элементов
+        f+=matrix[i][j]         #cумма элементов ряда
+    if maxrow<f:                #поиск ряда с максимальной суммой эл
+        f=maxrow
+        imaxrow=i
 print ('maximum matrix element : ',max )
 print ('minimum matrix element : ', min)
 print ('summ of elements : ',summ)
+print ('index of the row with the maximum sum of elements : ', imaxrow)
 
 
 
