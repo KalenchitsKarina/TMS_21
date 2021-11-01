@@ -14,6 +14,8 @@ for i in range(n):
     for j in range (m):
         matrix[i].append(randint(a,b))
 
+print ()
+print ('matrix :')
 for i in matrix:
     print (i)
 
@@ -79,5 +81,27 @@ for i in range (n):
             matrix [i][j]=0
 for i in matrix:
     print (i)
+
+matrix_a=[]                     #создаем матрицы a и b
+matrix_b=[]
+
+for i in range (m):
+    matrix_a.append([])
+    matrix_b.append([])
+
+for i in range (m):
+    for j in range (n):
+        matrix_a[i].append(randint(a,b))
+        matrix_b[i].append(randint(a,b))
+
+print ()
+print ('matrix_a :')
+for i in matrix_a:
+    print (i)
+print ()
+print ('matrix_b :')
+for i in matrix_b:
+    print (i)
+
 
 
