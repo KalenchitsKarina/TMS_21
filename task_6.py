@@ -20,7 +20,7 @@ for i in matrix:
 max=matrix[0][0]
 min=matrix[0][0]
 summ=0
-maxrow=0
+maxrow=sum(matrix[0])
 imaxrow=0
 f=0
 for i in range (n):
@@ -39,6 +39,19 @@ print ('maximum matrix element : ',max )
 print ('minimum matrix element : ', min)
 print ('summ of elements : ',summ)
 print ('index of the row with the maximum sum of elements : ', imaxrow)
+
+maxcolumn=sum(matrix[0])
+imaxcolumn=0
+for j in range (m):
+    f=0
+    for i in range (n):
+        f+=matrix[i][j]
+    if maxcolumn<f:
+        maxcolumn=f
+        imaxcolumn=j
+print ('index of the column with the max sum of elements : ',imaxcolumn)
+
+
 
 
 
