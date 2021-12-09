@@ -25,14 +25,14 @@ index_f = 0
 
 ls = [3,4,5,6,7,4,4,3,5,6]
 ls_m = []
-for i in range(len(ls)-1):
-    if ls[i]<ls[i+1]:
+for i in range(len(ls) - 1):
+    if ls[i] < ls[i + 1]:
         if i == len(ls) - 1:
             index_f = i + 1
-            ls_m.append([index_s,index_f]) 
+            ls_m.append([index_s, index_f]) 
     else:
         index_f = i
-        ls_m.append([index_s,index_f])
+        ls_m.append([index_s, index_f])
         index_s = i + 1
 
 print (ls_m)      

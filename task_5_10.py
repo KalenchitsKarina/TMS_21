@@ -1,7 +1,7 @@
 from datetime import datetime
 import time
 import dateutil
-poezda=[
+poezda = [
 {
 'N_poezda':221,
 'Punkt_pr':'Minsk',
@@ -40,5 +40,5 @@ poezda=[
 ]
 
 for i in poezda:
-    if datetime.strptime(i['t_otpr'],'%H:%M:%S')+relativedelta(hours=7,minutes=20)>datetime.strptime(i['t_pr'],'%H:%M:%S'):
+    if datetime.strptime(i['t_otpr'],'%H:%M:%S') + relativedelta(hours = 7,minutes = 20) > datetime.strptime(i['t_pr'],'%H:%M:%S'):
         print ('OK')
