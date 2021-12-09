@@ -1,4 +1,4 @@
-a=int(input('Enter a: '))
-if a%1000==0:
+a = int(input('Enter a: '))
+if a % 1000 == 0:
     print ('millenium')
     
