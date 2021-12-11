@@ -1,7 +1,7 @@
-import ui_func
+from ui_func import run
 
 def main():
-    ui_func.run()
+    run()
 
 if __name__ == '__main__':
     main ()

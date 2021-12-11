@@ -1,9 +1,5 @@
 from exceptions import WrongSignException
-from func import my_sign
-from func import sum
-from func import sub
-from func import mul
-from func import div
+from func import Math
 
 def run():
 
@@ -13,7 +9,7 @@ def run():
     while True:
         print ('_____________________')
         try:
-            sign = my_sign()
+            sign = Math.my_sign()
         except WrongSignException:
             print ('Wrong sign!')
             continue
@@ -26,15 +22,17 @@ def run():
         except ValueError:
             print ('Invalid input type. You should enter numbers.')
             continue
+        val = Math (a, b)
+
         if sign == '+':
-            result = sum(a, b)
+            result = val.sum()
         elif sign == '-':
-            result = sub(a, b)
+            result = val.sub()
         elif sign == '*':
-            result = mul(a, b)
+            result = val.mul()
         elif sign == '/':
             try:
-                result = div (a, b)
+                result = val.div ()
             except ZeroDivisionError:
                 print ('division by zero.')
                 continue
