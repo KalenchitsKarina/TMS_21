@@ -64,12 +64,3 @@ def use_form(request):
                 fail_silently=False,
             )
             return redirect('/img/')
-
-
-
-
-
-
-
-
-
