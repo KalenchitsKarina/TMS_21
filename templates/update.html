@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление
+{% endblock %}
+
+{% block body%}
+  <main role="main">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <form action=''  method="post">
+                <p>Update product descriptions:</p>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input name="name" type="text" class="form-control" id="name"  value="{{product.name}}">
+                </div>
+                <div class="form-group">
+                  <label for="url">URL</label>
+                  <input name="url" type="text" class="form-control" id="url"  value="{{product.url}}">
+                </div>
+                <div class="form-group">
+                      <label for="amount">Amount</label>
+                      <input name="amount" type="text" class="form-control" id="amount" value="{{product.amount}}">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input name="price" type="text" class="form-control" id="price" value="{{product.price}}">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <input name="comment" type="text" class="form-control" id="comment" value="{{product.comment}}">
+                </div>
+                <div class="form-group py-5">
+                <button type="submit" class="btn btn-primary" onclick="">Submit</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% endblock %}
