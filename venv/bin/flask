@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/user/Desktop/Flask - HW19/venv/bin/python3.9" "$0" "$@"
+'''exec' "/Users/user/Desktop/Django - HW24/venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
