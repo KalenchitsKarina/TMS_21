@@ -10,7 +10,7 @@ def use_form(request):
     if request.method == "GET":
         if request.path == "/img/":
             context = {'type': 'Get'}
-            template = loader.get_template('img_form.html')
+            template = loader.get_template('index.html')
             return HttpResponse(template.render(context, request))
         elif request.path == "/img/save/":
             context = {'type': 'Get'}
